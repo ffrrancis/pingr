@@ -1,10 +1,9 @@
-
 <h2>
 <img width="170" align="left" style="float: left; margin: 0 50px 0 0;" alt="pingr" src="https://i.imgur.com/ZSFQ3GW.png"> 
 
 # <samp>pingr</samp>
 
-[![Run on Repl.it](https://repl.it/badge/github/DeltaCoderr/KarmaBot)](https://repl.it/github/r6nted/pingr)
+[![Run on Repl.it](https://repl.it/badge/github/r6nted/pingr)](https://repl.it/github/r6nted/pingr)
 
 <samp>Pingr pings all of your repl projects at once without you having to have the tab open.</samp>
 
