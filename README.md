@@ -4,7 +4,7 @@
 </div>
 
 > <samp>Pingr pings all of your repl projects at once without you having to have the tab open.</samp>
-> <samp>                                __NOTICE__: THIS PROJECT IS BUILT TO BE RAN ON [REPL.IT]((https://replit.com/~))</samp>
+> <samp>                                   __NOTICE__: THIS PROJECT IS BUILT TO BE RAN ON [REPL.IT]((https://replit.com/~))</samp>
 >
 ## <samp>Setup Process</samp>
 > <samp>First, fork my repl [here](https://replit.com/@5XI/pingr?v=1). Then, configure the `config.json` file with all your links you want to ping. Click the run button at the top of your screen then wait till you see this:</samp>
