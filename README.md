@@ -1,5 +1,5 @@
 <h2>
-<samp>Pingr</samp>
+<samp>🟣 Pingr</samp>
 </h2>
 </div>
 
