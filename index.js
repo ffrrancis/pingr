@@ -1,17 +1,25 @@
-const pinger = require("simple-website-pinger");
-const express = require("express");
+/*
 
-const app = express();
-const { links } = require("./config.json");
+  - https://github.com/ffrrancis/pingr
+  - last updated 4/4/2023
 
-app.get("/", (_req, res) => {
+*/
+
+
+const Pinger = require("simple-website-pinger");
+const Express = require("express");
+
+const App = Express();
+const { Links, Interval } = require("./config.json");
+
+App.get("/", (_req, res) => {
   res.sendFile("index.html", { root: __dirname });
 });
 
-app.listen(6666, () => {
+App.listen(6666, () => {
   console.log(
-    `[🟣 pingr notifications] Successfully started pinging. You can now leave this page.`
+    `[💎 pingr notifications] Successfully started pinging. You can now leave this page.`
   );
 });
 
-pinger.ping([links]);
+Pinger.ping([Links], Interval);

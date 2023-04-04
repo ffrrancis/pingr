@@ -1,3 +1,4 @@
 {
-  "links": ["https://l4e.5xi.repl.co/"]
+  "Links": ["Link 1", "Link 2"],
+  "Interval": 1
 }
