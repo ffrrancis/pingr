@@ -1,25 +1,40 @@
 /*
 
   - https://github.com/ffrrancis/pingr
-  - last updated 4/4/2023
-
+  - last updated 4/27/23
+    - by @lttrvqts
 */
 
 
-const Pinger = require("simple-website-pinger");
-const Express = require("express");
+const express = require('express');
+const http = require('http');
+const zello = require("zello");
 
-const App = Express();
-const { Links, Interval } = require("./config.json");
+const app = express();
+const config = require('./config.json')
 
-App.get("/", (_req, res) => {
-  res.sendFile("index.html", { root: __dirname });
+app.get('/', (req, res) => {
+  config.urls.forEach(url => {
+    setInterval(() => {
+      http.get(url, (err, response) => {
+        if (e) {
+          zello.error(e)
+          return;
+        }
+  
+        if (response.statusCode !== 200) {
+          zello.error(`Website not found`);
+          return;
+        }
+  
+        zello.success(`Website responded in ${response.time}ms`);
+      });
+    }, config.interval*1000 || 1000)()
+  
+    res.send('Pingr');
+  });
 });
 
-App.listen(6666, () => {
-  console.log(
-    `[💎 pingr notifications] Successfully started pinging. You can now leave this page.`
-  );
+app.listen(3000, () => {
+  zello.info('Server started on port 3000');
 });
-
-Pinger.ping([Links], Interval);
