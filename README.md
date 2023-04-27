@@ -3,7 +3,7 @@
 Pingr pings all of your [repl](https://replit.com) projects at once without you having to have the tab open.
 
 ## Guide
-1. Fork my repl [here](https://replit.com/@5XI/pingr?v=1).
+1. Import this repo into Repl
 2. Configure the `config.json` file with all the links you want to ping as well as the interval between pings.
 3. Click the run button at the top of your screen.
 
