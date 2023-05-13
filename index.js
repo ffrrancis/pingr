@@ -5,36 +5,18 @@
     - by @lttrvqts
 */
 
+const chalk = require("chalk");
+const init = require("./modules/init");
+const config = require("./config.json");
 
-const express = require('express');
-const http = require('http');
-const zello = require("zello");
+console.log(
+  chalk
+    .hex("#0a8cee")
+    .bold("Please wait while we initialize your repl(s) with the Pingr API")
+);
 
-const app = express();
-const config = require('./config.json')
-
-app.get('/', (req, res) => {
-  config.urls.forEach(url => {
-    setInterval(() => {
-      http.get(url, (err, response) => {
-        if (e) {
-          zello.error(e)
-          return;
-        }
-  
-        if (response.statusCode !== 200) {
-          zello.error(`Website not found`);
-          return;
-        }
-  
-        zello.success(`Website responded in ${response.time}ms`);
-      });
-    }, config.interval*1000 || 1000)()
-  
-    res.send('Pingr');
-  });
-});
-
-app.listen(3000, () => {
-  zello.info('Server started on port 3000');
+config.urls.forEach((repl) => {
+  init.run(repl);
+  console.log(`\n`);
+  console.log(chalk.hex("#07c8f9").bold(`${repl} has been initialized`));
 });
